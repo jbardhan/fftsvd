@@ -1,0 +1,10 @@
+CC = icc
+CFLAGS =  -cxxlib-icc -fast -O3 -xP -openmp -g
+#CFLAGS = -g -fast
+INCLUDE = -I$(SUPERLU_INC) -I/Users/jbardhan/Library/Frameworks/Intel_MKL.framework/Versions/Current/include -I/Users/jbardhan/Library/Frameworks/Intel_MKL.framework/Versions/Current/include/fftw -I. -I/Users/jbardhan/Library/Frameworks/Intel_IPP.framework/Versions/Current/include
+FLAGS = -DINTEL_C
+LDFLAGS = $(CFLAGS)
+LIBDIR =
+SUPERLU_INC =  ../SuperLU_3.0/SRC
+SUPERLU_LIB = ../SuperLU_3.0
+LIBS =  -L/Users/jbardhan/Library/Frameworks/Intel_MKL.framework/Versions/Current/lib/32  -lmkl_lapack -lfftw3xc_intel -lmkl_lapack -lmkl_ia32 -lmkl_lapack  -L$(SUPERLU_LIB) -lsuperlu_3.0 -lguide -L/Users/jbardhan/Library/Frameworks/Intel_IPP.framework/Versions/Current/lib -lippcore -lipps -lippsc -lm -lmkl_lapack
