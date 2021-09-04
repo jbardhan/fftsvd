@@ -4,8 +4,8 @@ INCLUDE = -I$(SUPERLU_INC)
 FLAGS = #-DMVTIME
 LDFLAGS = $(CFLAGS)
 LIBDIR =
-SUPERLU_INC = /usr/include/superlu
-SUPERLU_LIB = /usr/lib
+SUPERLU_INC = /home/bard415/include
+SUPERLU_LIB = /home/bard415/lib
 LIBS = -L$(SUPERLU_LIB) -lsuperlu_5.2.2 -llapack -lblas -lfftw3 -lfftw3f -lm
 
 
